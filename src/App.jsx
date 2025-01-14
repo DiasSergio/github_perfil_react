@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 import Perfil from "./components/Perfil";
-import Formulario from "./components/Formulario";
+// import Formulario from "./components/Formulario";
 import RepoList from "./components/RepoList";
 
 import './global.css'
 
 function App() {
 
-  const [renderizaFormulario, setRenderizaFormulario] = useState(true);
+  // const [renderizaFormulario, setRenderizaFormulario] = useState(true);
   const [userNameGit, setUserNameGit] = useState('DiasSergio')
 
   return (
@@ -19,7 +19,7 @@ function App() {
         </h1>
         <input type="text" onBlur={({ target }) => setUserNameGit(target.value)} placeholder="User name" />
       </form>
-      {userNameGit.length > 2 && (
+      {userNameGit.length >= 4 && (
         <>
           <Perfil userName={userNameGit} />
           <RepoList userName={userNameGit} />
