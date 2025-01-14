@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div>
-      <form className="container input">
+      <form className="input">
         <h1>
           Enter a valid Github user account
         </h1>
